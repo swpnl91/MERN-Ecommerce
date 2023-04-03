@@ -44,7 +44,7 @@ app.use("/api/v1/product", productRoutes);
 //   res.send("<h1>Welcome!</h1>");
 // });
 
-app.use('*', function(req, res) {           // This is done for deployment after 'npm run build'
+app.get('*', function (req, res) {           // This is done for deployment after 'npm run build'
   res.sendFile(path.join(__dirname, './client/build/index.html'));        // Setting the entry point file (index.html)
 });
 
